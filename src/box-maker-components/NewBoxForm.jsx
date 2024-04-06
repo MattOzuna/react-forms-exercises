@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./NewBoxForm.css"
 
 const NewBoxForm = ({AddBox}) => {
     const _initialState = {
@@ -27,7 +28,9 @@ const NewBoxForm = ({AddBox}) => {
             <input type="text" id="width" name="width" value={formData.width} onChange={handleChange}/>
             <label htmlFor="height">Height:</label>
             <input type="text" id="height" name="height" value={formData.height} onChange={handleChange}/>
-            <button>Submit</button>
+            <div>
+                <button>Submit</button>
+            </div>
         </form>
     )
 }
