@@ -1,0 +1,5 @@
+.Box {
+    margin: 20px;
+    display: inline-block;
+    flex: 0, 0, 25%;
+}
