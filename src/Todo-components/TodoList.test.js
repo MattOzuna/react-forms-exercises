@@ -26,5 +26,21 @@ it("should add a new Todo item to list", () => {
 });
 
 it('should remove a todo item with the "X" button', () => {
-    const {getByLabelText, queryByText} = render(<TodoList />)
-})
+  const { getByLabelText, queryByText } = render(<TodoList />);
+
+  const taskInput = getByLabelText("New Task:");
+  const addButton = queryByText("Add");
+
+  fireEvent.change(taskInput, { target: { value: "Test Task" } });
+  fireEvent.click(addButton);
+
+  const removeButton = queryByText("X");
+
+  expect(queryByText("Test Task")).toBeInTheDocument();
+  expect(queryByText("X")).toBeInTheDocument();
+
+  fireEvent.click(removeButton);
+
+  expect(queryByText("Test Task")).not.toBeInTheDocument();
+  expect(queryByText("X")).not.toBeInTheDocument();
+});
