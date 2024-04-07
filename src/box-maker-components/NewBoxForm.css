@@ -1,7 +1,9 @@
-button {
+.NewBoxForm > button {
+    display: block;
+    margin: auto;
     margin-top: 20px;
 }
 
-label{
+.NewBoxForm > label{
     margin-left: 20px;
 }

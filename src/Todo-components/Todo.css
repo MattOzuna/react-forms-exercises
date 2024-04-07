@@ -1,0 +1,8 @@
+.Todo {
+    margin: 10px;
+}
+
+.Todo > button{
+    margin-right: 20px;
+    padding: 5px;
+}

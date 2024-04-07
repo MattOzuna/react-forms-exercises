@@ -14,7 +14,7 @@ const Box = ({color, width = 100, height = 100, deleteBox, id}) => {
                 height: `${height}px`
             }}>
             </div>  
-            <div onClick={handleClick}>X</div>
+            <button onClick={handleClick}>X</button>
         </div>
         
     )
