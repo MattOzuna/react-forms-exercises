@@ -1,6 +1,19 @@
-import {renderer} from 'react-test-renderer';
+import { render, asFragment } from '@testing-library/react';
 import Todo from './Todo';
+import '@testing-library/jest-dom';
 
 it('should render', () => {
-    renderer.create(<Todo />)
+    render(<Todo 
+        task="test task 1"
+        id="0"
+    />)
+})
+
+it('should match snapshot', () => {
+    const { asFragment } = render(
+        <Todo 
+            task="test task 1"
+            id="0"
+        />)
+    expect(asFragment()).toMatchSnapshot()
 })
