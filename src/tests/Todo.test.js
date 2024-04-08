@@ -1,5 +1,5 @@
 import { render, asFragment } from '@testing-library/react';
-import Todo from './Todo';
+import Todo from '../Todo-components/Todo';
 import '@testing-library/jest-dom';
 
 it('should render', () => {

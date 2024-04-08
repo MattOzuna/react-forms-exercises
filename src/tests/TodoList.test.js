@@ -1,5 +1,5 @@
 import { render, asFragment, fireEvent } from "@testing-library/react";
-import TodoList from "./TodoList";
+import TodoList from "../Todo-components/TodoList";
 import "@testing-library/jest-dom";
 
 it("should render", () => {
