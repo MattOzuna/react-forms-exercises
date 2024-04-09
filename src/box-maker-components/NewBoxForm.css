@@ -7,3 +7,8 @@
 .NewBoxForm > label{
     margin-left: 20px;
 }
+
+.NewBoxForm > div {
+    display: inline-block;
+    margin-right: 5px;
+}
